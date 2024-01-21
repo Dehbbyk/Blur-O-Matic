@@ -30,7 +30,6 @@ class BlurWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, 
 
             // This is an utility function added to emulate slower work.
             delay(DELAY_TIME_MILLIS)
-             return try {
                 return@withContext try {
                     require(!resourceUri.isNullOrBlank()) {
                         val errorMessage =
@@ -61,4 +60,3 @@ class BlurWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, 
             }
         }
     }
-}
